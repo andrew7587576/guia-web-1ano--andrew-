@@ -1,0 +1,111 @@
+:root {
+  --primary: #2563EB;
+  --secondary: #10B981;
+  --text: #111827;
+  --bg-light: #F3F4F6;
+  --border: #E5E7EB;
+  --font-title: 'Poppins', sans-serif;
+  --font-text: 'Inter', sans-serif;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-text);
+  background: var(--bg-light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Navigation */
+nav {
+  margin: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+  background: var(--primary);
+  color: white;
+  outline: none;
+}
+
+/* Main content */
+main {
+  padding: 2rem 0;
+}
+
+/* Footer */
+footer {
+  background: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Accessibility */
+:focus {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+}
